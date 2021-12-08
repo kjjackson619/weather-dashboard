@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="bg-primary text-light p-3 text-center font-weight-bold" id="title-card">Weather Dashboard</h1>
+    </header>
+    <main class="flex-row justify-space-around">
+        <div class="col-12 col-md-4">
+            <div class="container">
+                <h2 class="font-weight-bold">Search for a City:</h2>
+                <input name="city-name" id="city-name" type="text" autofocus="true" class="w-100"></input>
+                <button type="search" id="btn" class="text-light bg-primary w-100 mt-1">Search</button>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-8">
+            <div class="container" id="5-day-forecast">
+                <h3>5 Day Forecast</h3>
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
