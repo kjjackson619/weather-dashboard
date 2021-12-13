@@ -1,3 +1,6 @@
+#header-class {
+background-image: linear-gradient(to right, rgb(67, 67, 231), darkblue);
+}
 
 ul {
     list-style: none;
@@ -9,6 +12,18 @@ li {
     padding-left: 10px;
 }
 
+.currentCard {
+    position: relative;
+bottom: 650px;
+left: 260px;
+margin-bottom: 30px;
+}
+
+.fiveDayCard {
+    position: relative;
+    bottom: 690px;
+    left: 270px;
+}
 
 .card-title {
     font-size: 20px;

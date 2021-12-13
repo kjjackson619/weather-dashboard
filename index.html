@@ -11,29 +11,30 @@
 </head>
 
 <body>
+    <!-- container 1 -->
 
+    <div class="container-fluid text-center bg-primary text-white" id="header-class">
+        <div class="card-body">
 
-
-    <div class="card">
-        <div class="card-body text-center bg-primary text-white">
-
-            <h1 class="header bg-primary">Weather Dashboard</h1>
+            <h1 class="header font-weight-bold">Weather Dashboard</h1>
 
         </div>
     </div>
 
-    <main class="container-fluid">
+    <!-- container 2 -->
+
+    <div class="container-fluid">
 
         <div class="row">
             <div class="col">
                 <div class="card-body text-center">
 
 
-                    <div class="card" style="width: 18rem;">
+                    <div class="card w-25">
                         <div class="card-body">
-                            <h3 class="card-subtitle">Search For A City:</h3>
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control searchInput" placeholder="Enter City Name">
+                            <h3 class="card-subtitle mb-3">Search For A City:</h3>
+                            <div class="input-group">
+                                <input type="text" class="form-control searchInput mb-3" placeholder="Enter City Name">
                                 <button class="btn bg-primary text-light searchButton w-100" type="button"
                                     id="btn">Search</button>
                             </div>
@@ -47,20 +48,25 @@
             </div>
         </div>
 
-    </main>
+    </div>
 
-    <main class="container d-flex justify-content-end">
-        <div class="row-8">
+    <!-- container 3 -->
+
+    <div class="container">
+        <div class="row">
             <div class="">
                 <div class="col">
                     <div class="col mt-4 mr-5">
-                        <div class="card currentCard pb-2 pt-1">
+                        <div class="card currentCard pb-2 pt-1 w-auto">
 
                         </div>
                     </div>
+
                     <div class="row">
-                        <div class="col mt-4">
-                            <div class="card pb-5 fiveDayCard pl-5">
+                        <div class="col-12 mt-4">
+                            <div class="card pb-5 fiveDayCard pl-5 w-auto">
+
+                                <!-- 5 day element -->
 
                                 <h5 class="card-title mt-2 mr-5">5-Day Forecast: </h5>
                                 <div class="row">
@@ -76,12 +82,9 @@
             </div>
 
         </div>
-    </main>
+    </div>
 
-
-
-
-
+    <!-- scripts -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

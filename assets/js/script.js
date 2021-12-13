@@ -1,21 +1,27 @@
+//global variables
+
 var apiKey = "2cf57f3bc628ca68fe4f4198c9697a35"
-
-
 var searchBtn = $(".searchButton");
+
+//store search item
 
 for (var i = 0; i < localStorage.length; i++) {
     var city = localStorage.getItem(i);
 
-    var cityName = $(".list-group").addClass("list-group-item");
+    var cityName = $(".list-group");
 
-    cityName.append("<button class='btn btn-secondary disabled'>" + city + "</button>");
+    cityName.append("<button class='btn btn-secondary d-flex mb-2 disabled'>" + city + "</button>");
 }
 
 var keyCount = 0;
 
+//search button functionality
+
 searchBtn.click(function () {
 
     var searchInputEl = $(".searchInput").val();
+
+    //api calls from Open Weather Map
 
     var apiWeatherUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInputEl + "&Appid=" + apiKey + "&units=imperial";
 
@@ -32,6 +38,7 @@ searchBtn.click(function () {
             var local = localStorage.setItem(keyCount, response.name);
             keyCount = keyCount + 1;
 
+            //current weather
 
             var currentCard = $(".currentCard").append("div").addClass("card-body");
             currentCard.empty();
@@ -48,10 +55,10 @@ searchBtn.click(function () {
             currentTemp.append("<p>" + "Humidity: " + response.main.humidity + "%" + "</p>");
 
 
-            var uvUrl = 'https://api.openweathermap.org/data/2.5/uvi?appid=2cf57f3bc628ca68fe4f4198c9697a35&lat=${response.coord.lat}&lon=${response.coord.lon}';
+            var urlUV = "https://api.openweathermap.org/data/2.5/uvi?appid=2cf57f3bc628ca68fe4f4198c9697a35&lat=${response.coord.lat}&lon=${response.coord.lon}";
 
             $.ajax({
-                url: uvUrl,
+                url: urlUV,
                 method: "GET"
             }).then(function (response) {
 
@@ -60,6 +67,8 @@ searchBtn.click(function () {
                 currentTemp.append(currentUV);
             });
         });
+
+        //Five day forecast 
 
         $.ajax({
             url: apiForecastUrl,
