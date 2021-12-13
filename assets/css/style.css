@@ -14,14 +14,14 @@ li {
 
 .currentCard {
     position: relative;
-bottom: 225px;
+bottom: 300px;
 left: 260px;
 margin-bottom: 100px;
 }
 
 .fiveDayCard {
     position: relative;
-    bottom: 325px;
+    bottom: 400px;
     left: 270px;
 }
 
