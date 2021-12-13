@@ -11,63 +11,78 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="card">
-            <div class="card-body text-center bg-primary text-white w-100">
 
-                <h1 class="header bg-primary">Weather Dashboard</h1>
 
+
+    <div class="card">
+        <div class="card-body text-center bg-primary text-white">
+
+            <h1 class="header bg-primary">Weather Dashboard</h1>
+
+        </div>
+    </div>
+
+    <main class="container-fluid">
+
+        <div class="row">
+            <div class="col">
+                <div class="card-body text-center">
+
+
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h3 class="card-subtitle">Search For A City:</h3>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control searchInput" placeholder="Enter City Name">
+                                <button class="btn bg-primary text-light searchButton w-100" type="button"
+                                    id="btn">Search</button>
+                            </div>
+                        </div>
+
+                        <ul class="list-group">
+
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
+    </main>
 
-        <div class="container">
-            <div class="row">
+    <main class="container d-flex justify-content-end">
+        <div class="row-8">
+            <div class="">
                 <div class="col">
-                    <div class="card-body text-center">
+                    <div class="col mt-4 mr-5">
+                        <div class="card currentCard pb-2 pt-1">
 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mt-4">
+                            <div class="card pb-5 fiveDayCard pl-5">
 
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                                <h3 class="card-subtitle mb-2">Search For A City:</h3>
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control searchInput" placeholder="Enter City Name">
-                                    <button class="btn bg-primary searchButton w-100" type="button" id="btn"><i
-                                            class="fas fa-search"></i></button>
+                                <h5 class="card-title mt-2 mr-5">5-Day Forecast: </h5>
+                                <div class="row">
+                                    <div class="col fiveDayOne">
+                                    </div>
+
                                 </div>
+
                             </div>
-
-                            <ul class="list-group">
-
-
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col mt-4 mr-5">
-                <div class="card currentCard pb-2 pt-1">
-                    <h5 class="card-title mt-2 text-center">Current Forecast</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mt-4">
-                    <div class="card pb-5 fiveDayCard pl-5">
-
-                        <h5 class="card-title mt-2 mr-5">5-Day Forecast: </h5>
-                        <div class="row">
-                            <div class="col fiveDayOne">
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-    </div>
+    </main>
+
+
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
